@@ -27,7 +27,12 @@
       {{ end }}
     </span>
   {{ end }}
+
   {{ partial "cover.html" . }}
+
+  {{ with .Params.Description }}
+  <p> {{ . }} </p>
+  {{ end }}
 
   {{ if (.Params.Toc | default .Site.Params.Toc) }}
     <div class="table-of-contents">
