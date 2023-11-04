@@ -69,10 +69,10 @@
     display: block;
     margin-bottom: 20px;
     font-size: 1rem;
-    opacity: .5;
+    opacity: .75;
 
     a {
-      text-decoration: none;
+		color: inherit;
     }
   }
 
@@ -81,10 +81,10 @@
   }
 
   &-cover {
-    border: 20px solid $accent;
+    border: $image-border;
     background: transparent;
     margin: 40px 0;
-    padding: 20px;
+    padding: $image-padding;
 
     @media ($phone) {
       padding: 10px;
@@ -133,4 +133,10 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a {
 
 .footnotes {
   color: transparentize($color, .5);
+}
+
+#TableOfContents {
+	li:not(:empty)::before {
+		color: inherit;
+	}
 }
